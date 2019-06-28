@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LittleWeb</name>
+    </assembly>
+    <members>
+        <member name="T:LittleWeb.Controllers.PersonnesController">
+            <summary>
+            Gestion des personne
+            </summary>
+        </member>
+        <member name="M:LittleWeb.Controllers.PersonnesController.#ctor(LittleWeb.Data.ApplicationDbContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:LittleWeb.Controllers.PersonnesController.GetPersonne">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWeb.Controllers.PersonnesController.GetPersonne(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWeb.Controllers.PersonnesController.PutPersonne(System.Int32,Data.Personne)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="personne"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWeb.Controllers.PersonnesController.PostPersonne(Data.Personne)">
+            <summary>
+            
+            </summary>
+            <param name="personne"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LittleWeb.Controllers.PersonnesController.DeletePersonne(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

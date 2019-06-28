@@ -1,0 +1,100 @@
+<table>
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Nom
+            </th>
+            <th>
+                Prenom
+            </th>
+        </tr>
+    </thead>
+    <tbody *ngIf="personnes">
+        <tr *ngFor="let personne of personnes">
+            <td>
+                {{personne.id}}
+            </td>
+            <td>
+                {{ personne.nom }}
+            </td>
+            <td>
+                {{personne.prenom}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h2>Données locales</h2>
+<table mat-table [dataSource]="personnes" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Id Column -->
+    <ng-container matColumnDef="Id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let personne"> {{personne.id}} </td>
+    </ng-container>
+
+    <!-- Nom Column -->
+    <ng-container matColumnDef="Nom">
+        <th mat-header-cell *matHeaderCellDef> Nom </th>
+        <td mat-cell *matCellDef="let personne"> {{personne?.nom}} </td>
+    </ng-container>
+
+    <!-- Prenom Column -->
+    <ng-container matColumnDef="Prenom">
+        <th mat-header-cell *matHeaderCellDef> Prénom </th>
+        <td mat-cell *matCellDef="let personne"> {{personne?.prenom}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let personnes; columns: columnsToDisplay"></tr>
+
+</table>
+
+<hr>
+<br>
+<div>
+    <button (click)="updatePersonnes()">Refresh</button>
+</div>
+<h2>Données appels API</h2>
+<table mat-table [dataSource]="personnesApi" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Id Column -->
+    <ng-container matColumnDef="Id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let personne"> {{personne?.id}} </td>
+    </ng-container>
+
+    <!-- Nom Column -->
+    <ng-container matColumnDef="Nom">
+        <th mat-header-cell *matHeaderCellDef> Nom </th>
+        <td mat-cell *matCellDef="let personne"> {{personne?.nom}} </td>
+    </ng-container>
+
+    <!-- Prenom Column -->
+    <ng-container matColumnDef="Prenom">
+        <th mat-header-cell *matHeaderCellDef> Prénom </th>
+        <td mat-cell *matCellDef="let personne"> {{personne?.prenom}} </td>
+    </ng-container>
+    <ng-container>
+        <th>Actions</th>
+        <td>
+
+        </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let personnesApi; columns: columnsToDisplay"></tr>
+
+</table>
+
+<app-createpersonne></app-createpersonne>

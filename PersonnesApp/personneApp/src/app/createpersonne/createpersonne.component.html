@@ -1,0 +1,23 @@
+<br>
+<hr>
+<div>
+    <h2>Nouvelle entrée</h2>
+</div>
+<div class="container">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" class="form-control" [(ngModel)]="model.nom" name="nom" />
+        </div>
+        <div class="form-group">
+            <label>Prenom</label>
+            <input class="form-control" [(ngModel)]="model.prenom" name="prenom" required/>
+        </div>
+        <div class="form-group">
+            <div>
+                <button class="btn btn-primary" type="submit">Ajouter</button>
+
+            </div>
+        </div>
+    </form>
+</div>
